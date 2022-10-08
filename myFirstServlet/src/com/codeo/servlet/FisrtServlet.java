@@ -34,9 +34,10 @@ public class FisrtServlet extends HttpServlet {
 	    pw.println("<h1> your Lastname is: "+Lastname);
 	    pw.println("<h1 style='color:green'>Date and time"+date);
 	    
+	    
 	    System.out.println(date);
 	    pw.close();
-	   
+	
 		
 	}
 }

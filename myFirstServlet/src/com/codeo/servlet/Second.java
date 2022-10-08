@@ -15,6 +15,7 @@ public class Second extends HttpServlet
 	String firstname=null;
 	String Secondname=null;
 	String Lastname=null;
+	 int age=0;
 	
    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
    {
@@ -26,6 +27,8 @@ public class Second extends HttpServlet
 	    firstname=request.getParameter("firstname");
 	    Secondname=request.getParameter("Secondname");
 	    Lastname=request.getParameter("Lastname");
+	   
+	    age=Integer.parseInt(request.getParameter("age"));
 	    Date date=new Date();
 	    pw.println("<h1> your name is: "+firstname);
 	    pw.println("<h1 style='color:blue'>Date and time"+date);
@@ -34,7 +37,9 @@ public class Second extends HttpServlet
 	    pw.println("<h1> your Lastname is: "+Lastname);
 	    pw.println("<h1 style='color:green'>Date and time"+date);
 	    
+	    
 	    System.out.println(date);
+	    
 	    pw.close();
    }
 }
